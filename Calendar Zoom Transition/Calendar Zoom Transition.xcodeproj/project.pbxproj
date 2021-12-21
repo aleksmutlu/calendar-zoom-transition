@@ -13,6 +13,13 @@
 		59392A9E275E4419004BC95C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59392A9C275E4419004BC95C /* Main.storyboard */; };
 		59392AA0275E441C004BC95C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59392A9F275E441C004BC95C /* Assets.xcassets */; };
 		59392AA3275E441C004BC95C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59392AA1275E441C004BC95C /* LaunchScreen.storyboard */; };
+		59392AAC275E7843004BC95C /* MonthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59392AAA275E7843004BC95C /* MonthCollectionViewCell.swift */; };
+		59392AAD275E7843004BC95C /* MonthCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59392AAB275E7843004BC95C /* MonthCollectionViewCell.xib */; };
+		59392AB1275F5E23004BC95C /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59392AB0275F5E23004BC95C /* MonthView.swift */; };
+		59392AB3275F5E2B004BC95C /* MonthView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59392AB2275F5E2B004BC95C /* MonthView.xib */; };
+		59979F312762617600D4CB91 /* DayNumberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59979F2F2762617600D4CB91 /* DayNumberCollectionViewCell.swift */; };
+		59979F322762617600D4CB91 /* DayNumberCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59979F302762617600D4CB91 /* DayNumberCollectionViewCell.xib */; };
+		5998639A275F78DC00AD2EFF /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59986399275F78DC00AD2EFF /* CalendarManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		59392A9F275E441C004BC95C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59392AA2275E441C004BC95C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		59392AA4275E441C004BC95C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59392AAA275E7843004BC95C /* MonthCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCollectionViewCell.swift; sourceTree = "<group>"; };
+		59392AAB275E7843004BC95C /* MonthCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonthCollectionViewCell.xib; sourceTree = "<group>"; };
+		59392AB0275F5E23004BC95C /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
+		59392AB2275F5E2B004BC95C /* MonthView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonthView.xib; sourceTree = "<group>"; };
+		59979F2F2762617600D4CB91 /* DayNumberCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNumberCollectionViewCell.swift; sourceTree = "<group>"; };
+		59979F302762617600D4CB91 /* DayNumberCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayNumberCollectionViewCell.xib; sourceTree = "<group>"; };
+		59986399275F78DC00AD2EFF /* CalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +73,43 @@
 				59392A96275E4419004BC95C /* AppDelegate.swift */,
 				59392A98275E4419004BC95C /* SceneDelegate.swift */,
 				59392A9A275E4419004BC95C /* ViewController.swift */,
+				59986399275F78DC00AD2EFF /* CalendarManager.swift */,
+				59979F3327626C7300D4CB91 /* DayNumberCollectionViewCell */,
+				59392AAF275F5E08004BC95C /* MonthView */,
+				59392AAE275F5CEC004BC95C /* MonthCollectionViewCell */,
 				59392A9C275E4419004BC95C /* Main.storyboard */,
 				59392A9F275E441C004BC95C /* Assets.xcassets */,
 				59392AA1275E441C004BC95C /* LaunchScreen.storyboard */,
 				59392AA4275E441C004BC95C /* Info.plist */,
 			);
 			path = "Calendar Zoom Transition";
+			sourceTree = "<group>";
+		};
+		59392AAE275F5CEC004BC95C /* MonthCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				59392AAA275E7843004BC95C /* MonthCollectionViewCell.swift */,
+				59392AAB275E7843004BC95C /* MonthCollectionViewCell.xib */,
+			);
+			path = MonthCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		59392AAF275F5E08004BC95C /* MonthView */ = {
+			isa = PBXGroup;
+			children = (
+				59392AB0275F5E23004BC95C /* MonthView.swift */,
+				59392AB2275F5E2B004BC95C /* MonthView.xib */,
+			);
+			path = MonthView;
+			sourceTree = "<group>";
+		};
+		59979F3327626C7300D4CB91 /* DayNumberCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				59979F2F2762617600D4CB91 /* DayNumberCollectionViewCell.swift */,
+				59979F302762617600D4CB91 /* DayNumberCollectionViewCell.xib */,
+			);
+			path = DayNumberCollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +171,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				59392AA3275E441C004BC95C /* LaunchScreen.storyboard in Resources */,
+				59392AB3275F5E2B004BC95C /* MonthView.xib in Resources */,
+				59979F322762617600D4CB91 /* DayNumberCollectionViewCell.xib in Resources */,
+				59392AAD275E7843004BC95C /* MonthCollectionViewCell.xib in Resources */,
 				59392AA0275E441C004BC95C /* Assets.xcassets in Resources */,
 				59392A9E275E4419004BC95C /* Main.storyboard in Resources */,
 			);
@@ -139,8 +187,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				59392A9B275E4419004BC95C /* ViewController.swift in Sources */,
+				59392AB1275F5E23004BC95C /* MonthView.swift in Sources */,
+				59392AAC275E7843004BC95C /* MonthCollectionViewCell.swift in Sources */,
+				5998639A275F78DC00AD2EFF /* CalendarManager.swift in Sources */,
 				59392A97275E4419004BC95C /* AppDelegate.swift in Sources */,
 				59392A99275E4419004BC95C /* SceneDelegate.swift in Sources */,
+				59979F312762617600D4CB91 /* DayNumberCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
