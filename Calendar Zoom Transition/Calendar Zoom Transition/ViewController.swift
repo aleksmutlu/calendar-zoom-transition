@@ -65,11 +65,7 @@ class ViewController: UIViewController {
     // MARK: - Months
     
     private func displayMonths() {
-        print(calendarManager.months)
         collectionView.reloadData()
-        
-        // Indexlere gore takvim gorunumu yap.
-        // Fontlarin onemi yok
     }
 }
 
@@ -114,6 +110,23 @@ extension ViewController: UICollectionViewDelegate {
         guard let monthCell = cell as? MonthCollectionViewCell else { return }
         monthCell.month = calendarManager.months[indexPath.item]
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let month = calendarManager.months[indexPath.item]
+        print("Did select month: \(month.title)")
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        UIView.animate(withDuration: 0.2, animations: {
+            cell?.alpha = 0.5
+        })
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.alpha = 1
+    }
 }
 
 // MARK: - UICollectionViewDataSource
@@ -128,7 +141,7 @@ extension ViewController: UICollectionViewDataSource {
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
-        return 10
+        return calendarManager.months.count
     }
     
     func collectionView(

@@ -29,6 +29,7 @@ final class MonthCollectionViewCell: UICollectionViewCell {
 
     // MARK: - Views
     
+    @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - Properties
@@ -62,7 +63,7 @@ final class MonthCollectionViewCell: UICollectionViewCell {
     // MARK: - Display
     
     private func displayDetails() {
-        print("Displaying Month: \(month.title)")
+        monthLabel.text = month.title
         collectionView.reloadData()
     }
 }
@@ -118,10 +119,10 @@ extension MonthCollectionViewCell: UICollectionViewDelegate {
         }
         
         let dayNumberToCheck = indexPath.item + 1
-        if dayNumberToCheck < month.startDayIndex + 1 { // TODO: - 1 for Sunday
+        if dayNumberToCheck < month.startDayIndex {
             dayNumberCell.configure(dayNumber: nil)
         } else {
-            let dayNumber = indexPath.item - month.startDayIndex + 3
+            let dayNumber = indexPath.item + 2 - month.startDayIndex
             dayNumberCell.configure(dayNumber: dayNumber)
         }
     }
@@ -135,7 +136,7 @@ extension MonthCollectionViewCell: UICollectionViewDataSource {
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
-        return month.numberOfDays
+        return month.numberOfDays + month.startDayIndex - 1
     }
     
     func collectionView(

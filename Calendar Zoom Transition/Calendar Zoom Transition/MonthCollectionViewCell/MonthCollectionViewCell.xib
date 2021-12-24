@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,8 +17,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="292" height="202"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="G53-Vy-kBS">
-                        <rect key="frame" x="0.0" y="0.0" width="292" height="202"/>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="G53-Vy-kBS">
+                        <rect key="frame" x="0.0" y="24.5" width="292" height="177.5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aA4-un-RKI">
                             <size key="itemSize" width="128" height="128"/>
@@ -27,18 +27,28 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                     </collectionView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rw-Rc-TK7">
+                        <rect key="frame" x="0.0" y="2" width="292" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="G53-Vy-kBS" secondAttribute="trailing" id="EGz-T1-vCq"/>
                 <constraint firstAttribute="bottom" secondItem="G53-Vy-kBS" secondAttribute="bottom" id="EHi-xc-DsT"/>
+                <constraint firstItem="9rw-Rc-TK7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="H0K-cv-MhR"/>
+                <constraint firstAttribute="trailing" secondItem="9rw-Rc-TK7" secondAttribute="trailing" id="H8k-Oh-oIO"/>
                 <constraint firstItem="G53-Vy-kBS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="JUl-ql-Upd"/>
-                <constraint firstItem="G53-Vy-kBS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="dwy-QO-xiX"/>
+                <constraint firstItem="9rw-Rc-TK7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="bHC-EL-664"/>
+                <constraint firstItem="G53-Vy-kBS" firstAttribute="top" secondItem="9rw-Rc-TK7" secondAttribute="bottom" constant="2" id="qed-vf-DUd"/>
             </constraints>
             <size key="customSize" width="292" height="202"/>
             <connections>
                 <outlet property="collectionView" destination="G53-Vy-kBS" id="cDw-hG-sia"/>
+                <outlet property="monthLabel" destination="9rw-Rc-TK7" id="ZRc-Kv-OwL"/>
             </connections>
             <point key="canvasLocation" x="311.59420289855075" y="169.41964285714286"/>
         </collectionViewCell>

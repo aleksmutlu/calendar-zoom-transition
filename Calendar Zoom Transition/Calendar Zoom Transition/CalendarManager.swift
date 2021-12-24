@@ -20,10 +20,12 @@ struct Month {
         self.title = title
         self.startDayIndex = startDayIndex
         self.numberOfDays = numberOfDays
+//
+//        for i in (1...numberOfDays) {
+//            index
+//        }
         
-        for i in (1...numberOfDays) {
-            index 
-        }
+        dayIndexTable = [:]
     }
 }
 
